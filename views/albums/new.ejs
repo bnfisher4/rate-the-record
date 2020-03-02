@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add An Album</h1>
+    <form id="new-form" action="/albums" method="POST">
+        <label>Title:</label>
+        <input type="text">
+        <label>Artist:</label>
+        <input type="text">
+        <label>Release Date:</label>
+        <input type="date" name="releaseDate">
+        <label>Genre:</label>
+        <select name="genre">
+            <option value="Alternative">Alternative</option>
+            <option value="Country">Country</option>
+            <option value="Electronic">Electronic</option>
+            <option value="Hip-Hop">Hip-Hop</option>
+            <option value="Pop">Pop</option>
+            <option value="R&B">R&B</option>
+            <option value="Rock">Rock</option>
+            <option value="Other">Other</option>
+        </select>
+        <label>Explicit</label>
+        <input type="checkbox" name="explicit" checked>
+        <input type="submit" value="Add Album">
+    </form>
+    <a href="/albums">Back to Albums</a>
+</body>
+</html>

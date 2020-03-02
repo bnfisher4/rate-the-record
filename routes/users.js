@@ -1,15 +1,15 @@
 var express = require('express');
 var router = express.Router();
-var usersCtrl = require('../controllers');
+var indexCtrl = require('../controllers');
 
 
-/* GET users listing. */
+/* GET index listing. */
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.get('/users', usersCtrl.index);
-router.post('/reviews', isLoggedIn, usersCtrl.addReview);
+router.get('/index', indexCtrl.index);
+router.post('/albums/:id/reviews', isLoggedIn, indexCtrl.addReview);
 
 
 function isLoggedIn(req, res, next) {

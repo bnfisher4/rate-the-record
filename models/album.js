@@ -1,6 +1,13 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const reviewSchema = new Schema({
+    content: String,
+    rating: {type: Number, min: 1, max: 5, default: 5}
+  }, {
+    timestamps: true
+  });
+
 const albumSchema = new Schema({
     title: {
         type: String,
@@ -19,6 +26,9 @@ const albumSchema = new Schema({
     explicit: {
         type: Boolean,
         default: false
+    },
+    reviews: {
+     type: [reviewSchema]   
     }
 }, {
     timestamps: true
