@@ -9,9 +9,13 @@
 <body>
     <h1>ALBUMS</h1>
     <section>
-            <div>Title: <%= albums.title %></div>
-            <div>Artisit: <%= albums.artist %></div>
+       <% albums.forEach(function(a) { %>
+        <a href="/albums/<%= a._id%>">Details</a>
+        <div>Title: <%= a.title %></div>
+        <div>Artisit: <%= a.artist %></div></br>
+
+       <% }) %>
     </section>
-    <a href="/albums/new">Add An Album</a>
+    <a href="/">Home</a>
 </body>
 </html>

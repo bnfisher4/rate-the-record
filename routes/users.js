@@ -1,6 +1,6 @@
-var express = require('express');
-var router = express.Router();
-var indexCtrl = require('../controllers');
+const express = require('express');
+const router = express.Router();
+const indexCtrl = require('../controllers');
 
 
 /* GET index listing. */

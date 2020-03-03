@@ -18,7 +18,7 @@ const albumSchema = new Schema({
         required: true
     },
     releaseDate: {
-        type: Number
+        type: Date
     },
     genre: {
         type: String,

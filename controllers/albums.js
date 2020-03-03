@@ -2,8 +2,6 @@ const Album = require('../models/album');
 
 module.exports = {
     index,
-    new: newAlbum,
-    create,
     show
 };
 
@@ -14,18 +12,10 @@ function index(req, res) {
 }
 
 function show(req, res) {
-
-}
-
-function create(req, res) {
-    if(!req.body.releaseDate) delete req.body.releaseDate;
-    const album = new Album(req.body);
-    album.save(function(err) {
-        if (err) return res.redirect('/albums/new');
-        res.redirect('/albums');
+    Album.findById(req.params.id, function(err, album) {
+            res.render('albums/show', { title: 'Album Detail', album });
     });
 }
 
-function newAlbum(req, res) {
-    res.render('albums/new', {title: 'Add An Album'});
-}
+
+//use node repl
