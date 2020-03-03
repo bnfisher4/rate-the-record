@@ -1,4 +1,4 @@
-const User = require('../models/user');
+const Listener = require('../models/listener');
 const Album = require('../models/album');
 
 module.exports = {
@@ -15,6 +15,6 @@ function index(req, res) {
 function addReview(req, res, next) {
     req.user.reviews.push(req.body);
     req.user.save(function(err) {
-      res.redirect('/albums');
+      res.redirect(`/albums/${album._id}`);
     });
 }

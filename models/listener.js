@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
+const listenerSchema = new Schema({
     name: String,
     email: String,
     avatar: String,
@@ -10,4 +10,4 @@ const userSchema = new Schema({
     timestamps: true
 });
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Listener', listenerSchema);

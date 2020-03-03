@@ -12,7 +12,7 @@ require('./config/database');
 require('./config/passport');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var listenersRouter = require('./routes/listeners');
 var albumsRouter = require('./routes/albums');
 var artistsRouter = require('./routes/artists');
 var reviewsRouter = require('./routes/reviews');
@@ -42,10 +42,10 @@ app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/listeners', listenersRouter);
 app.use('/albums', albumsRouter);
 app.use('/artists', artistsRouter);
-app.use('/reviews', reviewsRouter);
+app.use('/', reviewsRouter);
 
 
 

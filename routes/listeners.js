@@ -3,13 +3,11 @@ const router = express.Router();
 const indexCtrl = require('../controllers');
 
 
-/* GET index listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+/* GET users listing. */
 
-router.get('/index', indexCtrl.index);
-router.post('/albums/:id/reviews', isLoggedIn, indexCtrl.addReview);
+
+router.get('/listeners', indexCtrl.index);
+router.post('/albums/:id', isLoggedIn, indexCtrl.addReview);
 
 
 function isLoggedIn(req, res, next) {
