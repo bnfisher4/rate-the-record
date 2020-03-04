@@ -1,24 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rate The Record</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1>Rate The Record</h1>
-    <ul>
-      <li>Home</li>
-      <li><a href="/albums">Albums</a></li>
-      <li><a href="/artists">Artists</a></li>
-      <li>
-        <% if (user) { %>
-          <a href="/logout">Logout</a>
-        <% } else { %>
-          <a href="/auth/google">Login</a>
-        <% } %>
-      </li>
-    </ul>
-  </body>
-</html>
+<%- include('./partials/header') %>
+  <main>
+    <h1>Welcome to Rate The Record</h1>
+
+    <%- include('./partials/footer') %>

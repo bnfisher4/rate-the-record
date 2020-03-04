@@ -1,24 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <title>ARTISTS</title>
-</head>
-<body>
-    <h1>ARTISTS</h1>
+<%- include('./partials/header') %>
+<main>
+  <h1>ARTISTS</h1>
     <table id="list">
-        <thead>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Born</th>
+          <th>Hometown</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% artists.forEach(function(art) { %>
           <tr>
-            <th>Name</th>
-            <th>Born</th>
-            <th>Hometown</th>
+            <td><%= artist.name %></td>
+            <td><%= artist.born.toLocaleDateString() %></td>
+            <td><%= artist.hometown %></td>
           </tr>
-        </thead>
-        <tbody>
-            
-        </tbody>
+        <% }) %>
+      </tbody>
     </table>
-</body>
-</html>
+    <%- include('./partials/footer') %>

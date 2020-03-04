@@ -3,32 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- Materialize CSS Framework -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link rel="stylesheet" href="stylesheets/style.css" />
+      <!-- JavaScript for Materialize -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <title>Document</title>
 </head>
 <body>
     <nav>
-    <%if (user) {%>
-        <li>
-            <a href="/" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>
-        </li>
-        <li>
-            <a href="/albums" <%- title === 'Albums' ? 'class="active"' : '' %>>ALBUMS</a>
-        </li>
-        <li>
-            <a href="/artists" <%- title === 'Artists' ? 'class="active"' : '' %>>ARTISTS</a>
-        </li>
-        <li>
-            <a href="/logout">LOGOUT</a>
-        </li>
-    <% } else { %>
-        <li>
-            <a href="/albums" <%- title === 'Albums' ? 'class="active"' : '' %>>ALBUMS</a>
-        </li>
-        <li>
-            <a href="/auth/google">LOGIN</a>
-        </li>
+        <div class="nav-wrapper">
+        <a href="#!" class="brand-logo center">RATE THE RECORD</a>
+        <ul class="left hide-on-med-and-down">
+        <%if (user) {%>
+            <li>
+                <a href="/">HOME</a>
+            </li>
+            <li>
+                <a href="/albums">ALBUMS</a>
+            </li>
+            <li>
+                <a href="/artists">ARTISTS</a>
+            </li>
+            <li>
+                <a href="/logout">LOGOUT</a>
+            </li>
+        <% } else { %>
+            <li>
+                <a href="/">HOME</a>
+            </li>
+            <li>
+                <a href="/albums">ALBUMS</a>
+            </li>
+            <li>
+                <a href="/artists">ARTISTS</a>
+            </li>
+            <li>
+                <a href="/auth/google">LOGIN</a>
+            </li>
         <% } %>
-      </nav>
-    
-</body>
-</html>
+        </ul>
+        </div>
+    </nav>
