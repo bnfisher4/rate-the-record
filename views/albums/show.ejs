@@ -39,28 +39,38 @@
             </form>
         </div>
         <% } %>
-
+        
         <% if (album.reviews.length) { %>
             <table>
-              <thead>
-                <tr>
-                    <th>User</th>
-                    <th>Date</th>
-                    <th>Review</th>
-                    <th>Rating</th>
-                </tr>
-              </thead>
-              <tbody>
-                <% album.reviews.forEach(function(r) { %>
-                  <tr>
-                      <td><%= r.userName %></td>
-                      <td><%= r.createdAt.toLocaleDateString() %></td>
-                      <td><%= r.content %></td>
-                      <td><%= r.rating %></td>
-                  </tr>
-                  <% }); %>
-              </tbody>
-            </table>
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Date</th>
+                        <th>Review</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% album.reviews.forEach(function(r) { %>
+                        <tr>
+                            <td><%= r.userName %></td>
+                            <td><%= r.createdAt.toLocaleDateString() %></td>
+                            <td><%= r.content %></td>
+                            <td><%= r.rating %></td>
+                            <%if (user) {%>
+                            <td>
+                                <a href="/albums/<%= album._id %>/reviews/<%= r._id%>/edit">Edit</a>
+                            </td>
+                            <td>
+                                <form action="/albums/<%= album._id %>/reviews/<%= r._id %>?_method=DELETE" method="POST">
+                                    <input type="submit" value="DELETE">
+                                </form>
+                            </td>
+                            <% } %>
+                        </tr>
+                        <% }); %>
+                    </tbody>
+                </table>
           <% } else { %>
             <h5>No Reviews Yet</h5>
           <% } %>

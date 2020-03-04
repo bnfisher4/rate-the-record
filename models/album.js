@@ -5,7 +5,6 @@ const reviewSchema = new Schema({
     content: String,
     rating: {type: Number, min: 1, max: 5, default: 5},
     userName: String,
-    createdBy: {type: Schema.Types.ObjectId, ref: 'Listener'}
   }, {
     timestamps: true
   });
