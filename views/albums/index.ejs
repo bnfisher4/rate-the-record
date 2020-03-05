@@ -1,20 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <title>ALBUMS</title>
-</head>
-<body>
+<%- include('../partials/header') %>
+<main>
     <h1>ALBUMS</h1>
-    <section>
+    <section id="albums">
        <% albums.forEach(function(a) { %>
-        <a href="/albums/<%= a._id%>">Details</a>
-        <div>Title: <%= a.title %></div>
-        <div>Artisit: <%= a.artist %></div></br>
+        <div>
+            <button class="waves-effect #0277bd light-blue darken-3 btn-xsmall"><a href="/albums/<%= a._id%>">Details</a></button></br>
+            <img src="<%= a.img %>" alt="<%= a.title %>" id="album-pic"></br>
+            Title: <%= a.title %></br>
+            Artisit: <%= a.artist %>
+        </div>
        <% }) %>
     </section>
-    <a href="/">Home</a>
-</body>
-</html>
+    <%- include('../partials/footer') %>

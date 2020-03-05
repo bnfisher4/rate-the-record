@@ -5,5 +5,7 @@ module.exports = {
 };
 
 function index(req, res) {
-    res.render('artists/index');
+    Artist.find({}, function(err, artists) {
+        res.render('artists/index', {artists, user:req.user});
+    });
 }

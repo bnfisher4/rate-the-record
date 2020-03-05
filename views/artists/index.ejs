@@ -1,4 +1,4 @@
-<%- include('./partials/header') %>
+<%- include('../partials/header') %>
 <main>
   <h1>ARTISTS</h1>
     <table id="list">
@@ -12,11 +12,11 @@
       <tbody>
         <% artists.forEach(function(art) { %>
           <tr>
-            <td><%= artist.name %></td>
-            <td><%= artist.born.toLocaleDateString() %></td>
-            <td><%= artist.hometown %></td>
+            <td><%= art.name %></td>
+            <td><%- art.born ? art.born.toLocaleDateString() : '' %></td>
+            <td><%= art.hometown %></td>
           </tr>
         <% }) %>
       </tbody>
     </table>
-    <%- include('./partials/footer') %>
+    <%- include('../partials/footer') %>

@@ -1,10 +1,76 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica;
+  color: black;
+}
+
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 a {
-  color: #00B7FF;
+  color: black;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  font-family: 'Permanent Marker', cursive;
+  /* font-family: 'Caveat', cursive; */
+}
+
+#details-page div {
+  background-color: red;
+  display: grid;
+  grid-template-areas: 'one two';
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+}
+
+#albums {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  text-align: center;
+  grid-gap: 2rem;
+
+}
+
+#album-pic {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 4px;
+  margin-top: 8px;
+}
+
+.card, .card-image {
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+#card-login {
+  color: #03a9f4;
+}
+
+.brand-logo {
+  font-family: 'Permanent Marker', cursive;
+  /* font-family: 'Caveat', cursive; */
+}
+
+#nav-tag {
+  font-family: 'Caveat', cursive;
 }
 
 

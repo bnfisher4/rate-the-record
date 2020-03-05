@@ -11,6 +11,9 @@ const reviewSchema = new Schema({
   });
 
 const albumSchema = new Schema({
+    img: {
+        type: String
+    },
     title: {
         type: String,
         required: true

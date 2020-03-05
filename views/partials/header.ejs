@@ -4,42 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
       <!-- Materialize CSS Framework -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      <link rel="stylesheet" href="stylesheets/style.css" />
+      <link rel="stylesheet" href="/stylesheets/style.css" />
       <!-- JavaScript for Materialize -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <nav>
+    <nav class="#0277bd light-blue darken-3">
         <div class="nav-wrapper">
-        <a href="#!" class="brand-logo center">RATE THE RECORD</a>
-        <ul class="left hide-on-med-and-down">
+        <a href="/" class="brand-logo center black-text">RATE THE RECORD</a>
+        <ul>
         <%if (user) {%>
-            <li>
-                <a href="/">HOME</a>
+            <li class="left hide-on-med-and-down">
+                <a href="/" class="black-text" id="nav-tag">HOME</a>
             </li>
-            <li>
-                <a href="/albums">ALBUMS</a>
+            <li class="left hide-on-med-and-down">
+                <a href="/albums" class="black-text">ALBUMS</a>
             </li>
-            <li>
-                <a href="/artists">ARTISTS</a>
+            <li class="left hide-on-med-and-down">
+                <a href="/artists" class="black-text">ARTISTS</a>
             </li>
-            <li>
+            <li class="right hide-on-med-and-down">
                 <a href="/logout">LOGOUT</a>
             </li>
         <% } else { %>
-            <li>
-                <a href="/">HOME</a>
+            <li class="left hide-on-med-and-down">
+                <a href="/" class="black-text">HOME</a>
             </li>
-            <li>
-                <a href="/albums">ALBUMS</a>
+            <li class="left hide-on-med-and-down">
+                <a href="/albums" class="black-text">ALBUMS</a>
             </li>
-            <li>
-                <a href="/artists">ARTISTS</a>
+            <li class="left hide-on-med-and-down">
+                <a href="/artists" class="black-text">ARTISTS</a>
             </li>
-            <li>
+            <li class="right hide-on-med-and-down">
                 <a href="/auth/google">LOGIN</a>
             </li>
         <% } %>

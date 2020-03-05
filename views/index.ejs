@@ -1,5 +1,29 @@
 <%- include('./partials/header') %>
   <main>
     <h1>Welcome to Rate The Record</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col s10 offset-s1">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://i.imgur.com/QqbA67T.jpg">
+              <span class="card-title">Rate The Record</span>
+            </div>
+            <div class="card-content">
+              <p>Welcome to Rate The Record where you can review albums and check out a list of artists.
+                Feel free to browse the site or login to leave a review.
+              </p>
+            </div>
+            <div class="card-action">
+              <%if (user) {%>
+                <a href="/albums" id="card-login">Explore the Music</a>
+              <% } else { %>
+                <a href="/auth/google" id="card-login">Login Here</a>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <%- include('./partials/footer') %>
+<%- include('./partials/footer') %>
