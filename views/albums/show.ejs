@@ -23,13 +23,15 @@
               <label>Leave A Review:</label>
               <textarea name="content"></textarea>
               <label>Rating:</label>
-              <select name="rating">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
+              <div class="input-field">
+                  <select name="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+              </div>
               <input type="submit" value="Add Review">
             </form>
         </div>
@@ -54,11 +56,11 @@
                         <td><%= r.rating %></td>
                         <%if (user) { %>
                         <td>
-                            <a href="/albums/<%= album._id %>/reviews/<%= r._id%>/edit">Edit</a>
+                            <button><a href="/albums/<%= album._id %>/reviews/<%= r._id%>/edit" id="edit">Edit</a></button>
                         </td>
                         <td>
                             <form action="/albums/<%= album._id %>/reviews/<%= r._id %>?_method=DELETE" method="POST">
-                                <input type="submit" value="DELETE">
+                                <input type="submit" value="Delete" id="delete">
                             </form>
                         </td>
                         <% } %>
