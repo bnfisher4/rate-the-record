@@ -1,13 +1,13 @@
 <%- include('../partials/header') %>
 <main>
     <h1>ALBUM DETAILS</h1>
+    <img src="<%= album.img %>" alt="<%= album.title %>" id="detail-pic"></br>
     <section id="details-page">
-        <img src="<%= album.img %>" alt="<%= album.title %>" id="detail-pic"></br>
         <div>Title: </div>
         <div><%= album.title %></div>
         <div>Artist: </div>
         <div><%= album.artist %></div>
-        <div>Release Date: </div>
+        <div>Released: </div>
         <div><%= (album.releaseDate).toLocaleDateString() %></div>
         <div>Genre: </div>
         <div><%= album.genre %></div>
@@ -20,7 +20,7 @@
         <div>
             <form id="add-review-form" method="POST"
               action="/albums/<%= album._id %>/reviews">
-              <label>Review:</label>
+              <label>Leave A Review:</label>
               <textarea name="content"></textarea>
               <label>Rating:</label>
               <select name="rating">

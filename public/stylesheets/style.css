@@ -21,20 +21,38 @@ main {
 
 footer {
   text-align: center;
+  margin-top: 25px;;
 }
 
 h1 {
   text-align: center;
   color: black;
   font-family: 'Permanent Marker', cursive;
-  /* font-family: 'Caveat', cursive; */
 }
 
-#details-page div {
+h2 {
+  color: black;
+  /* font-family: 'Permanent Marker', cursive; */
+  font-family: 'Baloo Bhai', cursive;
+}
+
+
+#details-page {
   display: grid;
-  grid-template-areas: 'one two';
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 2fr;
   grid-gap: 1rem;
+  justify-items: start;
+  font-size: 20px;
+  width: 400px;
+  margin: auto;
+  justify-content: center;
+}
+
+#detail-pic {
+  display: grid;
+  width: 500px;
+  height: 500px;
+  margin: auto;
 }
 
 #albums {
@@ -43,12 +61,13 @@ h1 {
   justify-content: center;
   text-align: center;
   grid-gap: 2rem;
+  margin-bottom: 20px;
 
 }
 
 #album-pic {
-  width: 60px;
-  height: 60px;
+  width: 90px;
+  height: 90px;
   margin-bottom: 4px;
   margin-top: 8px;
 }
@@ -69,7 +88,17 @@ h1 {
 }
 
 #nav-tag {
-  font-family: 'Caveat', cursive;
+  font-family: 'Baloo Bhai', cursive;
+  font-size: large;
+}
+
+#add-review-form {
+  width: 600px;
+}
+
+label {
+  color: black;
+  font-size: medium;
 }
 
 
