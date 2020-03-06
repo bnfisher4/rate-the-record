@@ -11,6 +11,7 @@
       <link rel="stylesheet" href="/stylesheets/style.css" />
       <!-- JavaScript for Materialize -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script defer src="/javascripts/script.js"></script>
     <title>RTR</title>
 </head>
 <body>
@@ -19,29 +20,29 @@
         <a href="/" class="brand-logo center black-text">RATE THE RECORD</a>
         <ul>
         <%if (user) {%>
-            <li class="left hide-on-med-and-down">
+            <li class="left <%- currentRequestedURL === '/' && 'active' %>">
                 <a href="/" class="black-text" id="nav-tag">HOME</a>
             </li>
-            <li class="left hide-on-med-and-down">
+            <li class="left <%- currentRequestedURL === '/albums' && 'active' %>">
                 <a href="/albums" class="black-text" id="nav-tag">ALBUMS</a>
             </li>
-            <li class="left hide-on-med-and-down">
+            <li class="left <%- currentRequestedURL === '/artists' && 'active' %>">
                 <a href="/artists" class="black-text" id="nav-tag">ARTISTS</a>
             </li>
-            <li class="right hide-on-med-and-down">
+            <li class="right">
                 <a href="/logout" id="nav-tag">LOGOUT</a>
             </li>
         <% } else { %>
-            <li class="left hide-on-med-and-down">
+            <li class="left <%- currentRequestedURL === '/' && 'active' %>">
                 <a href="/" class="black-text" id="nav-tag">HOME</a>
             </li>
-            <li class="left hide-on-med-and-down">
+            <li class="left <%- currentRequestedURL === '/albums' && 'active' %>">
                 <a href="/albums" class="black-text" id="nav-tag">ALBUMS</a>
             </li>
-            <li class="left hide-on-med-and-down">
+            <li class="left <%- currentRequestedURL === '/artists' && 'active' %>">
                 <a href="/artists" class="black-text" id="nav-tag">ARTISTS</a>
             </li>
-            <li class="right hide-on-med-and-down">
+            <li class="right">
                 <a href="/auth/google" id="nav-tag">LOGIN</a>
             </li>
         <% } %>

@@ -56,7 +56,7 @@
                         <td><%= r.rating %></td>
                         <%if (user) { %>
                         <td>
-                            <button><a href="/albums/<%= album._id %>/reviews/<%= r._id%>/edit" id="edit">Edit</a></button>
+                            <button class="edit-btn"><a href="/albums/<%= album._id %>/reviews/<%= r._id%>/edit" id="edit">Edit</a></button>
                         </td>
                         <td>
                             <form action="/albums/<%= album._id %>/reviews/<%= r._id %>?_method=DELETE" method="POST">

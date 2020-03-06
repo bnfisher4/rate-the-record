@@ -31,6 +31,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(methodOverride('_method'));
 
+app.use((req, res, next) => {
+  if(req.url.split('.').includes('css') || req.url.split('.').includes('js')) {
+    next();
+  } else {
+    res.locals.currentRequestedURL = req.url
+    next();
+  }
+})
+
 app.use(session({
   secret: 'SEIRocks!',
   resave: false,
