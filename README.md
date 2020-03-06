@@ -4,7 +4,8 @@
 Rate the record is a web app where you can browse albums and leave reviews for ones you've listened to. If you are logged in, you can write, update or delete your reviews. You can view past reviews left by other users you even if you are not logged in.
 
 ## Screenshot
-![Rate The Record]()
+![Rate The Record](https://i.imgur.com/iTDFhrZ.png)
+![Rate The Record](https://i.imgur.com/zJx3Epv.png)
 
 ## Technologies Used
 - Node.js
