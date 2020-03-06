@@ -9,6 +9,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  background-color: lightgray;
 }
 
 a {
@@ -17,11 +18,14 @@ a {
 
 main {
   flex: 1 0 auto;
+  background-color: lightgray;
 }
 
 footer {
   text-align: center;
-  margin-top: 25px;;
+  margin-top: 25px;
+  background-color: lightgray;
+
 }
 
 h1 {
@@ -47,6 +51,18 @@ th {
 td {
   font-size: 15px;
 }
+
+
+
+li.left:hover {
+  background-color: #01579b;
+  color: #0277bd;
+}
+
+i.small.material-icons.left {
+  margin: 0px;
+}
+
 
 
 #details-page {
@@ -84,9 +100,15 @@ td {
   margin-top: 8px;
 }
 
-#nav-tag {
+
+#nav-tag, #nav-tag-log {
   font-family: 'Baloo Bhai', cursive;
   font-size: large;
+}
+
+#nav-tag-log:hover {
+  background-color: #000000;
+  color: #0277bd;
 }
 
 #add-review-form {
@@ -100,6 +122,7 @@ td {
 #edit, #delete {
   background-color: #0277bd;
 }
+
 
 
 .edit-btn {

@@ -66,6 +66,16 @@
                         <% } %>
                     </tr>
                 <% }); %>
+
+                <% var total = 0 %>
+                <% album.reviews.forEach(function(r) { %>
+                    <% total += r.rating %>
+                <% }); %>
+                <tr>
+                    <td colspan="2"></td>
+                    <td><strong><%= (total / album.reviews.length).toFixed(1) %></strong></td>
+                </tr>
+                
             </tbody>
         </table>
     <% } else { %>

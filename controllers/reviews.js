@@ -24,7 +24,8 @@ function edit(req, res) {
     if(!rev.createdBy.equals(req.user && req.user.id)) return res.redirect(`/albums/${album._id}`);
     res.render('reviews/edit', {
       albumId: req.params.albumid,
-      rev
+      rev,
+      user: req.user 
     })
   });
 }
